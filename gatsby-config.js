@@ -14,6 +14,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+      src: 'https://identity.netlify.com/v1/netlify-identity-widget.js', // Change to the script filename
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
